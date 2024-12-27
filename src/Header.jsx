@@ -1,0 +1,47 @@
+import './index.css'
+
+
+function Header({handleClick}){
+    return(
+        <header className='light-theme'>
+            <div className="phone-number">
+                <h5>203-214-3282</h5>
+            </div>
+            <div className="main-header">
+                <div className="left">
+                    <a onClick={() => handleClick('home')}>
+                        <img src="./src/assets/Logo.png" alt="Logo" className = "logo"/>
+                    </a>
+                    <h4>Guardian Marine</h4>
+                </div>
+
+                <div className="top-right">
+                    <div className="mobile">
+                        <div className="dropdown">
+                            <button className="dropbtn"></button>
+                            <div className="dropdown-content">
+                                <a onClick={() => handleClick('about')} className="label">About</a>
+                                <a onClick={() => handleClick('contact')} className="label">Contact</a>
+                                <a onClick={() => handleClick('services')} className="label">Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="computer">
+                        <div className="right">
+                            <a onClick={() => handleClick('home')} className="label">Home</a>
+                            <a onClick={() => handleClick('services')} className="label">New Installations</a>
+                            <a onClick={() => handleClick('about')} className="label">About</a>
+                            <a onClick={() => handleClick('services')} className="label">Services</a>
+                            <a onClick={() => handleClick('contact')} className="label">Products</a>
+                            <a onClick={() => handleClick('contact')} className="label">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+    )
+}
+
+
+export default Header

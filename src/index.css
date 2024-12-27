@@ -1,0 +1,477 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #434750;
+    --lightGrey: #6C717C;
+}
+
+
+/*themes */
+.light-theme{
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--white);
+    --btnFontColor: var(--grey);
+}
+.dark-theme{
+    --bg: var(--grey);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--grey);
+}
+
+
+/*body, header, footer*/
+body{
+    margin: 0;
+}
+main{
+    background-color: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header{
+    /*height: 120px;*/
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightGrey);
+    box-shadow: 0 -50vh 0 50vh var(--lightGrey);
+    flex-direction: column;
+}
+.main-header{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    height: 150px;
+    width: 100vw;
+    margin-bottom: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: var(--lightGrey);
+    box-shadow: 0 50vh 0 50vh var(--lightGrey);
+}
+.ft-left, .ft-right{
+    display: flex;
+    flex: 1;
+}
+
+
+/*button*/
+.btn{
+    height: 25px;
+    width: 50px;
+    border-radius: 10% ;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+
+/* allignment, spacing*/
+@media screen and (max-width: 750px) {
+    /* do small screen stuff*/
+    .mobile{
+        display: flex;
+    }
+    .computer{
+        display: none;
+    }
+    .container{
+        display: block;
+        margin: auto;
+    }
+    .top-right{
+        display: flex;
+        flex: 1;
+        justify-content: right;
+        align-content:right
+    }
+    .right{
+        justify-content: center;
+    }
+    h1{
+        font-size: 35px;
+    }
+}
+@media screen and (min-width: 750px){
+    .mobile{
+        display: none;
+    }
+    .computer{
+        display: flex;
+    }
+    .container{
+        display: flex;
+        width: 100vw;
+    }
+    .top-right{
+        justify-content: center;
+    }
+    .right{
+        justify-content: right;
+    }
+    h1{
+        font-size: 50px;
+    }
+}
+.name{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fixed{
+    width: 50px;
+    vertical-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    min-height: 30px;
+    margin: 16px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.serviceLabel{
+    display: flex;
+    margin-left: 16px;
+    font-size: 20px;
+    margin-top: 8px;
+    border: 1px solid #000;
+    line-height: 2.5;
+}
+.flex-item{
+    flex: 1;
+}
+
+.flex{
+    flex: 1;
+    display: flex;
+    float: right;
+    justify-content: right;
+}
+
+.left{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 0;
+    padding: 5px;
+}
+.right{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-right{
+    flex: 1;
+    display: flex;
+}
+.links{
+    margin: 5px;
+    padding: 5px;
+}
+.phone-number{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding-right: 30px;
+    justify-content: right;
+    background-color: black;
+    color: white;
+}
+.full{
+    margin: 8px;
+    width: 100%;
+}
+
+.footerCent{
+    width: 100vw;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.mobile{
+    font-size: 30px;
+}
+
+/* links*/
+a:visited{
+    color: var(--black);
+}
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+/* Dropdown stuff*/
+.dropbtn{
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/Photos/DropDown.png");
+    background-size: 50px, 50px;
+    background-color: var(--lightGrey);
+    border: none;
+}
+
+.dropdown{
+    display: flex;
+    float: right;
+    justify-content: right;
+    margin: 32px;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    left: auto;
+    right: 0px;
+    max-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translateY(64px);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.drop{
+    width: 50px;
+    height: 50px;
+}
+/* service dropdown*/
+.servicebtn{
+    background-color: var(--lightGrey);
+    border: none;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 8px;
+    width: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    padding: 0px;
+}
+.service-content{
+    display: none;
+    position: absolute;
+    background-color: #fcfcfc;
+    width: 98vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: auto;
+    left: 1vw;
+    border-radius: 5px;
+    transform: translateY(75px);
+}
+.service{
+    position: relative;
+    display: inline-block;
+}
+
+.serviceDrop:hover .service-content{display: flex; flex-direction: row;}
+.img-container{
+    flex: 1;
+    min-height: 150px;
+}
+.links{
+    display: inline-block;
+    justify-content: center;
+    align-content: flex-start;
+    width: auto;
+    margin: 0;
+}
+.serviceLabel{flex: 1; text-align: center;}
+
+.img-display{
+    height: auto;
+    width: 0px;
+    transition: width .1s;
+    transition-timing-function: ease-in-out;
+}
+.links:hover + .img-container .img-display{width: 25%;}
+
+
+/* headers */
+h1{
+    text-align: center;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+    margin: 8px;
+    text-align: center;
+    align-self: center;
+}
+
+h3{
+    text-align: center;
+    align-self: center;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+}
+h4{
+    margin: 8px;
+    text-align: center;
+    align-self: center;
+}
+h5{
+    margin: 5px;
+}
+
+
+/* photos */
+.logo{
+    width: 80%;
+    margin: 8px;
+}
+
+.main-logo{
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    margin-bottom: 32px;
+}
+
+.logos{
+    width: auto;
+    height: 100px;
+    margin: 16px;
+}
+
+
+/* lists */
+ul{
+    font-size: 18px;
+}
+li{
+    list-style: square;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.returnHome{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+*/
