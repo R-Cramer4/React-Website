@@ -1,7 +1,39 @@
 .photos{
-    width: 20vw;
-    min-width: 350px;
-    margin: 15px;
+    width: 50vw;
+    max-height: 400px;
+    align-self: center;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.photos.active{
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+.photo-banner{
+    display: flex;
+    justify-content: center;
+}
+
+.slogan{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slogan-banner{
+    margin-top: 5px;
+    background-color: #38425b;
+    color: white;
+}
+
+.companies{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 20px;
+}
+.home-logos{
+    height: 25vh;
+    margin: 10px;
 }
 
 .container{

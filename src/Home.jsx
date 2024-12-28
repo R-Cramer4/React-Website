@@ -1,29 +1,53 @@
 import './index.css'
 import './Home.css'
+import {useState, useEffect} from 'react';
+
+
+function FadeImages({images}){
+    const [imgIndex, setImgIndex] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setImgIndex(imgIndex => (imgIndex + 2) % images.length);
+        }, 5000)
+        return () => clearInterval(intervalId);
+    }, [images.length]);
+
+    return (
+        <div className='photo-banner'>
+            <img src={images[imgIndex]} alt="Before" className="photos active"/>
+            <img src={images[imgIndex + 1]} alt="After" className="photos active"/>
+        </div>
+    )
+
+}
+
 
 export default function Home(){
+    const images = [
+        './src/assets/Photos/Before1.jpeg',
+        './src/assets/Photos/After.jpeg',
+        './src/assets/Photos/After1.jpeg',
+        './src/assets/Photos/After2.jpeg',
+    ]
     return(
         <main className="light-theme">
 
-            <h3>Website Under Construction</h3>
+            <FadeImages images={images}/>
 
-            <div className="photo-container">
-                <div className="before">
-                    <h2>Before</h2>
-                    <div className="pics">
-                        <img src="./src/assets/Photos/Before1.jpeg" alt="Before" className="photos"/>
-                    </div>
-                </div>
-                <div className="after">
-                    <h2>After</h2>
-                    <div className="pics">
-                        <img src="./src/assets/Photos/After1.jpeg" alt="Before" className="photos"/>
-                        <img src="./src/assets/Photos/Before2.jpeg" alt="After" className="photos"/>
-                        <img src="./src/assets/Photos/After2.jpeg" alt="After" className="photos"/>
-                    </div>
-                </div>
+            <div className='slogan-banner'>
+                <h2 className='slogan'>Marine systems, customized to fit your needs</h2>
             </div>
-            <div className="spacer"/>
+            <div className='companies'>
+                <a href="https://abycinc.org/members/?id=17482131">
+                    <img src="./src/assets/ABYCMasterTech.png" alt="ABYC Logo" className="home-logos"/>
+                </a>
+                <a href="https://web.nmea.org/Directory-Listing/Guardian-Marine-LLC-8887">
+                    <img src="./src/assets/Photos/NMEA Logo.png" alt="NMEA Logo" className="home-logos"/>
+                </a>
+
+            </div>
+
         </main>
     )
 }

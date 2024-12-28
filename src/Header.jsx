@@ -29,10 +29,10 @@ function Header({handleClick}){
                     <div className="computer">
                         <div className="right">
                             <a onClick={() => handleClick('home')} className="label">Home</a>
-                            <a onClick={() => handleClick('services')} className="label">New Installations</a>
                             <a onClick={() => handleClick('about')} className="label">About</a>
                             <a onClick={() => handleClick('services')} className="label">Services</a>
-                            <a onClick={() => handleClick('contact')} className="label">Products</a>
+                            <a onClick={() => handleClick('gallery')} className="label">Gallery</a>
+                            <a onClick={() => handleClick('brands')} className="label">Our Brands</a>
                             <a onClick={() => handleClick('contact')} className="label">Contact</a>
                         </div>
                     </div>
