@@ -7,10 +7,10 @@ export default function Footer(){
     <div className="container">
         <div className="ft-left">
             <a href="https://abycinc.org/members/?id=17482131">
-                <img src="./src/assets/Photos/ABYC logo.png" alt="ABYC Logo" className="logos"/>
+                <img src="./src/assets/Photos/Brands/ABYC logo.png" alt="ABYC Logo" className="logos"/>
             </a>
             <a href="https://web.nmea.org/Directory-Listing/Guardian-Marine-LLC-8887">
-                <img src="./src/assets/Photos/NMEA Logo.png" alt="NMEA Logo" className="logos"/>
+                <img src="./src/assets/Photos/Brands/NMEA Logo.png" alt="NMEA Logo" className="logos"/>
             </a>
         </div>
         <div className="flex-item">
@@ -24,7 +24,7 @@ export default function Footer(){
 
         <div className="ft-right">
             <a href="https://www.sleipnergroup.com/">
-                <img src="./src/assets/Photos/Sleipner Logo.png" alt="Sleipner Logo" className="logos"/>
+                <img src="./src/assets/Photos/Brands/Sleipner Logo.png" alt="Sleipner Logo" className="logos"/>
             </a>
         </div>
     </div>
