@@ -4,49 +4,69 @@ import {useState, useEffect} from 'react';
 
 
 function FadeImages({images}){
-    const initState = {
-        current: 0,
-        next: 2
+    const initIndex = {
+        i0: 0,
+        i1: 2,
+        next: 1,
     }
-    const [imgIndex, setImgIndex] = useState(initState);
-    const [curImgIndex, setCurImgIndex] = useState(0);
-    const [nextImgIndex, setNextImgIndex] = useState(2);
     const [fade, setFade] = useState(false);
-
+    const[imgIndex, setImgIndex] = useState(initIndex);
     useEffect(() => {
         const interval = setInterval(() => {
-            setFade(true);
 
+            setFade(true);
             setTimeout(() => {
                 setFade(false);
-                setCurImgIndex((prevIndex) => {
-                    const newIndex = (prevIndex + 2) % images.length;
-                    setNextImgIndex(newIndex + 2) % images.length;
-                    return newIndex;
-                });
+                setImgIndex((prevI) => {
+                    const newI = prevI;
+                    if((prevI.i0 + 2) % images.length == prevI.i1){
+                        newI.i0 = (newI.i0 + 2) % images.length;
+                        newI.next = 0;
+                        return newI;
+                    }else{
+                        newI.i1 = (newI.i1 + 2) % images.length;
+                        newI.next = 1;
+                        return newI;
+                    }
+                })
             }, 2000);
-            
         }, 6000);
-
         return () => clearInterval(interval);
-    }, []);
-
+    });
 
     return (
         <div className='photo-banner'>
-            <div className='img-current'>
-                <img src={images[curImgIndex]} alt="Before" className={fade ? 'photos fade-out' : 'photos fade-in'}/>
-                <img src={images[curImgIndex + 1]} alt="After" className={fade ? 'photos fade-out' : 'photos fade-in'}/>
+            <div className={getCur(0, imgIndex.next)}>
+                <img src={images[imgIndex.i0]} alt="Before" className={getName(0, imgIndex.next, fade)}/>
+                <img src={images[imgIndex.i0 + 1]} alt="After" className={getName(0, imgIndex.next, fade)}/>
             </div>
-            <div className='img-next'>
-                <img src={images[nextImgIndex]} alt="Before" className='photos'/>
-                <img src={images[nextImgIndex + 1]} alt="After" className='photos'/>
+            <div className={getCur(1, imgIndex.next)}>
+                <img src={images[imgIndex.i1]} alt="Before" className={getName(1, imgIndex.next, fade)}/>
+                <img src={images[imgIndex.i1 + 1]} alt="After" className={getName(1, imgIndex.next, fade)}/>
             </div>
         </div>
     )
-
 }
-
+function getName(ind, next, fade){
+    let classes = 'photos';
+    if(next == ind){
+        if(!fade) classes += ' inactive';
+        else classes += ' fade-in';
+    }else{
+        if(!fade) classes += ' active';
+        else classes += ' fade-out';
+    }
+    return classes;
+}
+function getCur(ind, next){
+    let classes = '';
+    const w = window.innerWidth;
+    if(w < 750) classes += ' p-mobile';
+    else classes += ' p-computer';
+    if(next == ind) classes += ' img-next';
+    classes += ' img-current';
+    return classes;
+}
 
 export default function Home(){
     const images = [
@@ -73,7 +93,7 @@ export default function Home(){
             <div className='slogan-banner'>
                 <h2 className='slogan'>Marine systems, customized to fit your needs</h2>
             </div>
-            <div className='companies'>
+            <div className={window.innerWidth > 750 ? 'companies-c' : 'companies-m'}>
                 <a href="https://abycinc.org/members/?id=17482131">
                     <img src="./src/assets/Photos/Brands/ABYCMasterTech.png" alt="ABYC Logo" className="home-logos"/>
                 </a>

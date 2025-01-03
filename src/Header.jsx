@@ -5,7 +5,9 @@ function Header({handleClick}){
     return(
         <header className='light-theme'>
             <div className="phone-number">
-                <h5>203-214-3282</h5>
+                <a href='tel:203-214-3282'>
+                    <h5>203-214-3282</h5>
+                </a>
             </div>
             <div className="main-header">
                 <div className="left">

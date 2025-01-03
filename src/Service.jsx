@@ -29,7 +29,7 @@ function DropContent({text}){
     return (
         <div className='service-drop'>
             <p className='service-text'>{serviceText[text]}</p>
-            <img src='./src/assets/Photos/Before1.jpeg' alt="Before" className="photos active"/>
+            <img src='./src/assets/Photos/Before.jpeg' alt="Before" className="photos active"/>
         </div>
     )
 }

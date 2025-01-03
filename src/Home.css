@@ -1,10 +1,22 @@
 .photos{
-    width: 50vw;
-    min-height: 400px;
-    max-height: 600px;
     align-self: center;
     object-fit: cover;
     object-position: center;
+    opacity: 1;
+}
+div.p-mobile img.photos{
+    width: 100vw;
+    max-height: 250px;
+}
+div.p-computer img.photos{
+    max-width: 50vw;
+    min-height: 300px;
+    max-height: 500px;
+}
+.active{
+    opacity: 1;
+}
+.inactive{
     opacity: 0;
 }
 .img-current, .img-next{
@@ -23,8 +35,16 @@
 .photo-banner{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
-    height: auto;
+    height: 500px;
+    margin-top: 5px;
+}
+.p-mobile{
+    flex-direction: column;
+}
+.p-computer{
+    flex-direction: row;
 }
 
 .slogan{
@@ -33,15 +53,20 @@
 }
 .slogan-banner{
     margin-top: 5px;
-    background-color: #38425b;
-    color: white;
+    background-color: #6a7f99;
+    color: #131D2f;
 }
 
-.companies{
+.companies-c, .companies-m{
     display: flex;
     justify-content: space-evenly;
     align-content: center;
     margin-top: 20px;
+}
+.companies-m{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .home-logos{
     height: 25vh;
