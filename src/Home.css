@@ -53,8 +53,8 @@ div.p-computer img.photos{
 }
 .slogan-banner{
     margin-top: 5px;
-    background-color: #6a7f99;
-    color: #131D2f;
+    background-color: var(--lightGrey);
+    color: black;
 }
 
 .companies-c, .companies-m{

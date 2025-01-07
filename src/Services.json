@@ -1,0 +1,32 @@
+{
+    "dropdowns": [
+        {
+            "name": "Electrical",
+            "text": "With extensive field experience and training, the electrical systems on board is our specialty. Services from basic wiring to complete system upgrades is our brand. We at Guardian Marine follow electrical standards based on the renowned American Boat and Yacht Counsel (ABYC)",
+            "photos": [
+                "./src/assets/Photos/Gallery/LowerPanelBackAfter.jpg"
+            ]
+        },
+        {
+            "name": "Electronics",
+            "text": "Lorem Ipsum",
+            "photos": [
+                "./src/assets/Photos/Gallery/GarminLeftAfter.jpg"
+            ]
+        },
+        {
+            "name": "System Integration",
+            "text": "Lorem ipsum odor amet, consectetuer adipiscing elit. Semper consectetur natoque feugiat libero, montes tincidunt. Per orci bibendum porttitor in lacinia. Platea penatibus primis malesuada dapibus inceptos, blandit taciti vivamus nulla. Aptent habitasse laoreet laoreet etiam duis mus varius. Volutpat diam justo consectetur lobortis placerat ridiculus viverra dapibus. Accumsan curabitur ipsum aenean porta lorem. Molestie risus risus lacinia porttitor magnis nostra in. Bibendum maecenas sem justo sem sapien. Ligula inceptos nullam bibendum interdum aliquet faucibus.",
+            "photos": [
+                "./src/assets/Photos/Gallery/UpperPanelFrontAfter.jpg"
+            ]
+        },
+        {
+            "name": "Solar/Energy Systems",
+            "text": "aoshdfuaosdfbngouidsfgbaobfguioasfdbgiausbdfgb asudufsnd boasn dfoi nasd onsaio df",
+            "photos": [
+                "./src/assets/Photos/Gallery/SolarBoatAfter.jpg"
+            ]
+        }
+    ]
+}

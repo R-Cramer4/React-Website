@@ -1,35 +1,23 @@
 import { useState } from 'react';
-import './index.css'
-import './Service.css'
-
-
-const serviceText = [
-    'With extensive field experience and training, the electrical systems on board is our specialty. Services from basic wiring to complete system upgrades is our brand. We at Guardian Marine follow electrical standards based on the renowned American Boat and Yacht Counsel(ABYC)',
-    'Lorem Ipsum',
-    'asdfs',
-    'ayusdfuyogasfduyoidsabii'
-]
-const serviceLabel = [
-    'Electrical',
-    'Electronics',
-    'System Integration',
-    'Solar/Energy Systems'
-]
+import './index.css';
+import './Service.css';
+import dropData from './Services.json';
 
 function Dropdown({show, clickE, text}){
     return (
         <div className='service-p'>
-            {show[text] != -1 && <h3 className='service-w-content' onClick={() => {clickE(text);}}>{serviceLabel[text]}</h3>}
-            {show[text] == -1 && <h3 className='service-wo-content' onClick={() => {clickE(text);}}>{serviceLabel[text]}</h3>}
-            {show[text] != -1 && <DropContent text={text} />}
+            <h3 className={show[text] != -1 ? 'service w-content' : 'service wo-content'} onClick={() => {clickE(text);}}>
+                {dropData.dropdowns[text].name}
+            </h3>
+            <DropContent text={text} show={show} />
         </div>
     )
 }
-function DropContent({text}){
+function DropContent({text, show}){
     return (
-        <div className='service-drop'>
-            <p className='service-text'>{serviceText[text]}</p>
-            <img src='./src/assets/Photos/Before.jpeg' alt="Before" className="photos active"/>
+        <div className={show[text] == -1 ? 'service-drop' : 'service-drop active-drop'}>
+            <p className='service-text'>{dropData.dropdowns[text].text}</p>
+            <img src={dropData.dropdowns[text].photos[0]} alt="Before" className="service-img"/>
         </div>
     )
 }
