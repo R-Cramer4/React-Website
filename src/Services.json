@@ -9,7 +9,7 @@
         },
         {
             "name": "Electronics",
-            "text": "Lorem Ipsum",
+            "text": "Guardian Marine provides installation of new, upgraded parts.",
             "photos": [
                 "./src/assets/Photos/Gallery/GarminLeftAfter.jpg"
             ]
@@ -23,7 +23,7 @@
         },
         {
             "name": "Solar/Energy Systems",
-            "text": "aoshdfuaosdfbngouidsfgbaobfguioasfdbgiausbdfgb asudufsnd boasn dfoi nasd onsaio df",
+            "text": "With new power designs on the market, Guardian Marine provides options to retrofit old, outdated systems.",
             "photos": [
                 "./src/assets/Photos/Gallery/SolarBoatAfter.jpg"
             ]
