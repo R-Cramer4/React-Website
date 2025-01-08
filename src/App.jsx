@@ -21,7 +21,7 @@ function App() {
             {page == 'home' && <Home />}
             {page == 'services' && <Service />}
             {page == 'about' && <About />}
-            {page == 'contact' && <Contact />}
+            {page == 'contact' && <Contact handleClick={handleClick} />}
             {page == 'gallery' && <Gallery />}
             {page == 'brands' && <Brands />}
             <Footer />

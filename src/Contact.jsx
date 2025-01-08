@@ -5,8 +5,9 @@ import React from 'react';
 
 
 class ContactForm extends React.Component{
-    constructor(props){
-        super(props);
+    constructor({handleClick}){
+        super();
+        this.handleClick = handleClick.bind(this);
         this.state = {
             FirstName: undefined,
             LastName: undefined,
@@ -93,8 +94,8 @@ class ContactForm extends React.Component{
             return (
                 <>
                     <h3>Submission Success</h3>
-                    <img src="./src/assets/Photos/Logo-main.png" alt="logo" class="main-logo"/>
-                    <div class="spacer"></div>
+                    <img src="./src/assets/Photos/Logo-main.png" alt="logo" className="main-logo" onClick={() => this.handleClick('home')}/>
+                    <div className="spacer"></div>
                 </>
 
             )
@@ -159,10 +160,10 @@ class ContactForm extends React.Component{
     }
 }
 
-export default function Contact(){
+export default function Contact({handleClick}){
     return (
         <main className = "light-theme">
-                <ContactForm />
+                <ContactForm handleClick={handleClick} />
         </main>
     )
 }
