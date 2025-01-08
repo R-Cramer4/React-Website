@@ -1,9 +1,8 @@
-.mobile .form-group{
+.work-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100vw;
-}
-.mobile input, .mobile textarea{
-    width: 80%;
 }
 .buttonHolder{
     display: flex;
@@ -11,13 +10,8 @@
     align-items: center;
     flex-direction: column;
 }
-.computer{
-    justify-content: center;
-}
-.computer #firstName{
-    margin-right: 5px;
-}
 .form-group, .name-group{
+    width: 100%;
     margin-top: 10px;
     font-size: 20px;
     display: flex;
@@ -32,12 +26,10 @@
     align-items: center;
     flex-direction: column;
 }
-.mobile button[type="submit"]{
-    width: 138.5px;
-}
 .form-group input, .form-group textarea, .name-group input{
     font-size: 24px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 1px solid rgba(100, 100, 128, .6);
     border-radius: 5px;
     background-color: #fbfcff;
@@ -69,12 +61,22 @@ button[type="submit"]{
 button[type="submit"]:hover{
     background-color: rgba(140, 140, 145, .599);
 }
-.success{
-    display: none;
-}
 .errorMessage{
     margin-top: 5px;
-    display: none;
     font-size: 16px;
     color: red;
+}
+@media screen and (max-width: 750px){
+    .name-group{
+        flex-direction: column;
+    }
+    button[type="submit"]{
+        width: 138.5px;
+    }
+    input, textarea{
+        width: 100%;
+    }
+    .work-form{
+        width: 90vw;
+    }
 }
