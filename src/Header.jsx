@@ -1,4 +1,27 @@
+import { useState } from 'react';
 import './index.css'
+
+
+function DropButton(){
+    const [active, setActive] = useState(false);
+
+    function handleClick(){
+        setActive((act) => {return !act;});
+    }
+    return (
+        <div className="dropdown">
+            <button className="dropbtn" onClick={handleClick}/>
+            <div className={active ? "dropdown-content dc-active" : "dropdown-content"}>
+                <a onClick={() => handleClick('home')} className="drop-label">Home</a>
+                <a onClick={() => handleClick('about')} className="drop-label">About</a>
+                <a onClick={() => handleClick('services')} className="drop-label">Services</a>
+                <a onClick={() => handleClick('gallery')} className="drop-label">Gallery</a>
+                <a onClick={() => handleClick('brands')} className="drop-label">Our Brands</a>
+                <a onClick={() => handleClick('contact')} className="drop-label">Contact</a>
+            </div>
+        </div>
+    );
+}
 
 
 function Header({handleClick}){
@@ -19,14 +42,8 @@ function Header({handleClick}){
 
                 <div className="top-right">
                     <div className="mobile">
-                        <div className="dropdown">
-                            <button className="dropbtn"></button>
-                            <div className="dropdown-content">
-                                <a onClick={() => handleClick('about')} className="label">About</a>
-                                <a onClick={() => handleClick('contact')} className="label">Contact</a>
-                                <a onClick={() => handleClick('services')} className="label">Services</a>
-                            </div>
-                        </div>
+                        <DropButton />
+
                     </div>
                     <div className="computer">
                         <div className="right">

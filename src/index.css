@@ -255,29 +255,39 @@ a:hover{
     display: flex;
     float: right;
     justify-content: right;
-    margin: 32px;
+    margin: 16px;
 }
 
 .dropdown-content{
-    display: none;
     position: absolute;
     background-color: #f1f1f1;
     left: auto;
-    right: 0px;
-    max-width: 125px;
+    right: 2px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     transform: translateY(64px);
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.dc-active{
+    max-height: 1000px;
 }
 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
 }
-
-.dropdown:hover .dropdown-content {display: block;}
+.drop-label{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 30px;
+    margin: 16px;
+    font-size: 20px;
+    font-weight: normal;
+}
 
 .dropdown-content a:hover {background-color: #ddd;}
 
