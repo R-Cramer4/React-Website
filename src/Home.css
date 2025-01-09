@@ -38,7 +38,10 @@ div.p-computer img.photos{
     align-items: center;
     position: relative;
     height: 500px;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(45,51,70, 0.35);
 }
 .p-mobile{
     flex-direction: column;
@@ -52,16 +55,16 @@ div.p-computer img.photos{
     font-family: Arial, Helvetica, sans-serif;
 }
 .slogan-banner{
-    margin-top: 5px;
-    background-color: var(--lightGrey);
-    color: black;
+    background-color: #583B69;
+    color: #F6F8FE;
 }
 
 .companies-c, .companies-m{
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .companies-m{
     flex-direction: column;
@@ -107,4 +110,18 @@ div.p-computer img.photos{
 }
 .spacer{
     height: 100px;
+}
+
+
+
+.main-body{
+    background-image: url("./src/assets/Marina.jpg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    align-self: center;
+    border-radius: 10px;
 }

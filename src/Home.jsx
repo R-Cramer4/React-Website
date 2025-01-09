@@ -88,10 +88,14 @@ export default function Home(){
     return(
         <main className="light-theme">
 
+            <div className='main-body'>
+
+            </div>
+
             <FadeImages images={images}/>
 
             <div className='slogan-banner'>
-                <h2 className='slogan'>Marine systems, customized to fit your needs</h2>
+                <h2 className='slogan'>Specializing in creating systems that fit all your marine needs</h2>
             </div>
             <div className={window.innerWidth > 750 ? 'companies-c' : 'companies-m'}>
                 <a href="https://abycinc.org/members/?id=17482131">

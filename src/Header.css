@@ -135,10 +135,59 @@
     font-weight: normal;
 }
 .label{
-    min-height: 30px;
     margin: 16px;
     font-size: 20px;
     font-weight: normal;
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
+
+
+
+
+
+
+
+
+.site-links{
+    display: flex;
+    margin: 10px;
+    background-color: #242E4F;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 0px black;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 2px;
+    z-index: 1;
+}
+.label{
+    color: whitesmoke;
+}
+.header-content{
+    width: 100%;
+    margin: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.company, .company-desc, .label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.company{
+    font-size: 5vw;
+}
+.company-desc{
+    font-size: 2vw;
+}
+.head-logo{
+    width: 40%;
+    margin: 30px;
+}
+.newH{
+    background-color: #96C3EC;
+    display: flex;
+    box-shadow: 0 -5em 3em -5em inset #242E4F;
+}
