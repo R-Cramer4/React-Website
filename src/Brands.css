@@ -2,6 +2,7 @@
 
 .brands-row{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 0 4px;
@@ -17,15 +18,18 @@
     width: 100%;
 }
 @media screen and (max-width: 800px) {
-  .brands-coll {
-    flex: 50%;
-    max-width: 50%;
-  }
+    .brands-coll {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .brands-coll {
-    flex: 100%;
-    max-width: 100%;
-  }
+    .brands-col {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .brands-row{
+        flex-direction: column;
+    }
 }

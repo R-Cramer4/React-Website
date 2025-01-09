@@ -2,15 +2,17 @@ import { useState } from 'react';
 import './index.css'
 
 
-function DropButton(){
+function DropButton({changeSite}){
     const [active, setActive] = useState(false);
 
-    function handleClick(){
+    function handleClick(name){
         setActive((act) => {return !act;});
+        if(name == '') return; 
+        changeSite(name);
     }
     return (
         <div className="dropdown">
-            <button className="dropbtn" onClick={handleClick}/>
+            <button className="dropbtn" onClick={() => handleClick('')}/>
             <div className={active ? "dropdown-content dc-active" : "dropdown-content"}>
                 <a onClick={() => handleClick('home')} className="drop-label">Home</a>
                 <a onClick={() => handleClick('about')} className="drop-label">About</a>
@@ -42,7 +44,7 @@ function Header({handleClick}){
 
                 <div className="top-right">
                     <div className="mobile">
-                        <DropButton />
+                        <DropButton changeSite={handleClick} />
 
                     </div>
                     <div className="computer">

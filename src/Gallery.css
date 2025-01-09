@@ -1,6 +1,7 @@
 
 .gall-row{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 4px;
@@ -17,15 +18,19 @@
     width: 100%;
 }
 @media screen and (max-width: 800px) {
-  .gall-coll {
-    flex: 50%;
-    max-width: 50%;
-  }
+    .gall-coll {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .gall-coll {
-    flex: 100%;
-    max-width: 100%;
-  }
+    .gall-col {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .gall-row{
+        flex-direction: column;
+        align-items: center;
+    }
 }
