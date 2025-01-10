@@ -3,10 +3,12 @@
     object-fit: cover;
     object-position: center;
     opacity: 1;
+    border-radius: 10px;
+    padding: 2px;
 }
 div.p-mobile img.photos{
-    width: 100vw;
-    max-height: 250px;
+    width: auto;
+    height: 250px;
 }
 div.p-computer img.photos{
     max-width: 50vw;
@@ -37,18 +39,36 @@ div.p-computer img.photos{
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 500px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: rgba(45,51,70, 0.35);
+    height: 625px;
+    padding-top: 5px;
+    background-color: rgba(19, 65, 107, 0.8);
 }
 .p-mobile{
     flex-direction: column;
 }
 .p-computer{
     flex-direction: row;
+    align-content: space-evenly;
+    justify-content: space-around;
+    width: 100%;
+    margin: 30px;
 }
+.photo-text{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.photo-text-c{
+    align-self: auto;
+    margin: 10px;
+    font-size: 30px;
+}
+
+
+
 
 .slogan{
     font-size: 2em;
@@ -115,13 +135,102 @@ div.p-computer img.photos{
 
 
 .main-body{
+    /*
     background-image: url("./src/assets/Marina.jpg");
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 1000px;
-    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+    */
     display: flex;
+    align-content: center;
+    justify-content: center;
     align-self: center;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: 50px;
+    border: none;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 60%;
+}
+.body-background{
+    width: 100%;
+    opacity: 50%;
+    background: black;
+    border-radius: 15px;
+}
+.main-content{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    height: 100%;
+}
+.right-links{
+    display: flex;
+    width: 50%;
+    margin: 30px;
+}
+.link-col{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin: 10px;
+}
+.body-label{
+    background-color: #96C3EC;
+    border-radius: 50%;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    margin: 15px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    box-shadow: 1px 2px 3px 0px #555555;
+    transition: all 0.3s ease;
+}
+.body-label:hover{
+    box-shadow: 3px 4px 3px 0px #333333;
+    background-color: #67B2FF;
+
+}
+.body-slogan{
+    font-size: max(100%, 2.4vw);
+    text-wrap: wrap;
+    width: 50%;
+}
+@media screen and (width < 1350px){
+    .main-body{
+        width: 80%;
+    }
+}
+@media screen and (width < 700px){
+    .main-body{
+        width: 90%;
+    }
+    .right-links{
+        margin: 0;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .link-col{
+        margin: 0;
+    }
+    .body-label{
+        margin: 5px;
+    }
+}
+@media screen and (width < 500px){
+    .main-body{
+        width: 95%;
+    }
 }

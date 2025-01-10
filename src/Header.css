@@ -151,23 +151,40 @@
 
 .site-links{
     display: flex;
-    margin: 10px;
     background-color: #242E4F;
-    border-radius: 10px;
     box-shadow: 1px 1px 1px 0px black;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 2px;
     z-index: 1;
+    width: 100%;
+    top: 0px;
+    max-width: 100%;
+    border-radius: 0;
+}
+.sl-top{
+    width: auto;
+    top: 5px;
+    max-width: 90%;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+.sl-scroll{
+    width: 100%;
+    top: 0px;
+    max-width: 100%;
+    border-radius: 0;
+    transition: all 0.2s ease;
 }
 .label{
     color: whitesmoke;
+    font-size: min(2vw, 20px);
+    
 }
 .header-content{
     width: 100%;
     margin: 10px;
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

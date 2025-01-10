@@ -6,3 +6,22 @@
 .flex-item{
     flex: 1;
 }
+
+
+.new-foot{
+    background-color: black;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.ft-logo{
+    margin: 50px;
+    width: 20vw;
+}
+.ft-img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}

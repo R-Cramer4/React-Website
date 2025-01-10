@@ -36,6 +36,10 @@ function FadeImages({images}){
 
     return (
         <div className='photo-banner'>
+            <div className='photo-text'>
+                <h2 className='photo-text-c'>Before</h2>
+                <h2 className='photo-text-c'>After</h2>
+            </div>
             <div className={getCur(0, imgIndex.next)}>
                 <img src={images[imgIndex.i0]} alt="Before" className={getName(0, imgIndex.next, fade)}/>
                 <img src={images[imgIndex.i0 + 1]} alt="After" className={getName(0, imgIndex.next, fade)}/>
@@ -89,14 +93,25 @@ export default function Home(){
         <main className="light-theme">
 
             <div className='main-body'>
+                <img src='./src/assets/Marina.jpg' className='body-background' />
+                <div className='main-content'>
+                    <h2 className='body-slogan'>Marine systems, designed with your needs in mind</h2>
+                    <div className='right-links'>
+                        <div className='link-col'>
+                            <h5 className='body-label'>Electronics</h5>
+                            <h5 className='body-label'>Electrical</h5>
+                        </div>
+                        <div className='link-col'>
+                            <h5 className='body-label'>System Integration</h5>
+                            <h5 className='body-label'>Solar/Energy Systems</h5>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <FadeImages images={images}/>
 
-            <div className='slogan-banner'>
-                <h2 className='slogan'>Specializing in creating systems that fit all your marine needs</h2>
-            </div>
             <div className={window.innerWidth > 750 ? 'companies-c' : 'companies-m'}>
                 <a href="https://abycinc.org/members/?id=17482131">
                     <img src="./src/assets/Photos/Brands/ABYCMasterTech.png" alt="ABYC Logo" className="home-logos"/>

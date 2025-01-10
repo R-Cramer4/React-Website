@@ -33,7 +33,7 @@ function NewHeader({handleClick}){
     }
     return(
         <header className='newH'>
-            <div className='site-links'>
+            <div className={top == true ? 'site-links sl-top' : 'site-links sl-scroll'}>
                 <div className='links'>
                     <a onClick={() => handleClick('home')} className="label">Home</a>
                     <a onClick={() => handleClick('about')} className="label">About</a>
