@@ -72,7 +72,7 @@ function getCur(ind, next){
     return classes;
 }
 
-export default function Home(){
+export default function Home({handleClick}){
     const images = [
         './src/assets/Photos/Gallery/BatteryBefore.jpg',
         './src/assets/Photos/Gallery/BatteryAfter.jpg',
@@ -89,6 +89,7 @@ export default function Home(){
         './src/assets/Photos/Gallery/UpperPanelFrontBefore.jpg',
         './src/assets/Photos/Gallery/UpperPanelFrontAfter.jpg',
     ]
+    // https://www.pexels.com/photo/five-white-yacht-655794/
     return(
         <main className="light-theme">
 
@@ -98,12 +99,12 @@ export default function Home(){
                     <h2 className='body-slogan'>Marine systems, designed with your needs in mind</h2>
                     <div className='right-links'>
                         <div className='link-col'>
-                            <h5 className='body-label'>Electronics</h5>
-                            <h5 className='body-label'>Electrical</h5>
+                            <h5 className='body-label' onClick={() => handleClick('services', -1, 1, -1, -1)}>Electronics</h5>
+                            <h5 className='body-label' onClick={() => handleClick('services', 1, -1, -1, -1)}>Electrical</h5>
                         </div>
                         <div className='link-col'>
-                            <h5 className='body-label'>System Integration</h5>
-                            <h5 className='body-label'>Solar/Energy Systems</h5>
+                            <h5 className='body-label' onClick={() => handleClick('services', -1, -1, 1, -1)}>System Integration</h5>
+                            <h5 className='body-label' onClick={() => handleClick('services', -1, -1, -1, 1)}>Solar/Energy Systems</h5>
                         </div>
                     </div>
                 </div>

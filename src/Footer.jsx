@@ -2,37 +2,33 @@ import './index.css'
 import './Footer.css'
 
 
-function NewFoot(){
+function NewFoot({handleClick}){
     return(
         <footer className='new-foot'>
             <div className='ft-img'>
                 <img src='./src/assets/Logo.png' className='ft-logo'/>
             </div>
             <div className='ft-contact'>
-                <ul>
-                    <h2>Contact Info</h2>
-                    <li>Chris Johnson</li>
-                    <li><a href="mailto:Service@guardianmarinect.com">Service@guardianmarinect.com</a></li>
-                    <li><a href="tel:203-214-3282">203-214-3282</a></li>
-                </ul>
+                <h2 className='footer-h'>Contact Info</h2>
+                <p className='footer-li'>Chris Johnson</p>
+                <p className='footer-li'><a href="mailto:Service@guardianmarinect.com" className='footer-a'>Service@guardianmarinect.com</a></p>
+                <p className='footer-li'><a href="tel:203-214-3282" className='footer-a'>203-214-3282</a></p>
             </div>
             <div className='ft-site'>
-                <ul>
-                    <h2>More</h2>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Gallery</li>
-                    <li>Brands</li>
-                    <li>Contact</li>
-                    <li>About</li>
-                </ul>
+                <h2 className='footer-h'>More</h2>
+                <p className='footer-li' onClick={() => handleClick('home')}>Home</p>
+                <p className='footer-li' onClick={() => handleClick('services')}>Services</p>
+                <p className='footer-li' onClick={() => handleClick('gallery')}>Gallery</p>
+                <p className='footer-li' onClick={() => handleClick('brands')}>Brands</p>
+                <p className='footer-li' onClick={() => handleClick('contact')}>Contact</p>
+                <p className='footer-li' onClick={() => handleClick('about')}>About</p>
             </div>
         </footer>
     )
 }
 
-export default function Footer(){
-    return <NewFoot />
+export default function Footer({handleClick}){
+    return <NewFoot handleClick={handleClick}/>
     /*
     return(
         <footer>

@@ -9,7 +9,7 @@
 
 
 .new-foot{
-    background-color: black;
+    background-color: #080810;
     height: auto;
     color: white;
     display: flex;
@@ -24,4 +24,23 @@
     width: 30%;
     display: flex;
     justify-content: center;
+}
+.footer-li{
+    color: white;
+    margin: 5px;
+}
+.footer-h{
+    align-self: inherit;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.footer-a{
+    color: white;
+}
+.ft-contact, .ft-site{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }

@@ -25,15 +25,27 @@ function DropButton({changeSite}){
         </div>
     );
 }
-function NewHeader({handleClick}){
+function NewHeader({handleClick, page}){
     const [top, setTop] = useState(true);
     window.onscroll = function() {
         if(window.scrollY == 0) setTop(true);
         else setTop(false);
     }
+    function getHeader(){
+        var str = 'site-links';
+        if(page != 'home'){
+            return str + ' sl-scroll';
+        }
+        else if(top){
+            str += ' sl-top';
+        }else str += ' sl-scroll';
+        return str;
+
+    }
     return(
         <header className='newH'>
-            <div className={top == true ? 'site-links sl-top' : 'site-links sl-scroll'}>
+            <div className={getHeader()}>
+                {(top != true || page != 'home') && <img src='./src/assets/Logo.png' className='small-logo' onClick={() => handleClick('home')}/>}
                 <div className='links'>
                     <a onClick={() => handleClick('home')} className="label">Home</a>
                     <a onClick={() => handleClick('about')} className="label">About</a>
@@ -44,22 +56,25 @@ function NewHeader({handleClick}){
                 </div>
                 <a href='tel:203-214-3282' className='label'>203-214-3282</a>
             </div>
-            <div className='header-content'>
-                <img src="./src/assets/Logo.png" alt="Logo" className = "head-logo"/>
-                <div className='name-and-desc'>
-                    <h1 className='company'>Guardian Marine</h1>
-                    <h4 className='company-desc'>Custom Marine Systems</h4>
+            {page == 'home' && 
+                <div className='header-content'>
+                    <img src="./src/assets/Logo.png" alt="Logo" className = "head-logo"/>
+                    <div className='name-and-desc'>
+                        <h1 className='company'>Guardian Marine</h1>
+                        <h4 className='company-desc'>Custom Marine Systems</h4>
+                    </div>
                 </div>
-            </div>
+            }
+            {page != 'home' && <div className='head-space' />}
 
         </header>
     )
 }
 
-function Header({handleClick}){
+function Header({handleClick, page}){
     return (
         <>
-            <NewHeader handleClick={handleClick}/>
+            <NewHeader handleClick={handleClick} page={page}/>
         </>
     )
     /*

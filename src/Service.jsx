@@ -23,9 +23,7 @@ function DropContent({text, show}){
 }
 
 
-export default function Service(){
-    let initState = [-1, -1, -1, -1]
-    const [show, setShow] = useState(initState);
+export default function Service({show, setShow}){
     function clickE(index){
         const nextState = show.map((c, i) => {
             if(i === index){
